@@ -1,17 +1,21 @@
 const humanCatDogYears = humanYears => {
-function catYears (humanYears){
-    if (humanYears === 1) return 15
-    if (humanYears === 2) return 9 + catYears(humanYears)
-    if (humanYear =+ 3) return 4 + catYears (humanYears)
-    return catYears
- 
-}
+    let catYears = 0;
+    let dogYears = 0;
 
-function dogYears (humanYears){
-    if (humanYears === 1) return 15
-    if (humanYears === 2) return 9 + dogYears(humanYears)
-    if (humanYear =+ 3) return 4 + dogYears (humanYears)
-    return dogYears
+for (let i = 1; i<= humanYears; i+= 1){
+    if (i === 1) {
+        catYears += 15;
+        dogYears += 15;
+    }
+    else if (i === 2){
+        catYears += 9;
+        dogYears += 9;
+
+    }
+    else {
+        catYears += 4;
+        dogYears += 5;
+    }
 }
     return [humanYears,catYears,dogYears];
 };
